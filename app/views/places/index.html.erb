@@ -1,4 +1,5 @@
 
+
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
     <h1><%= place.name %></h1>
@@ -6,5 +7,7 @@
     <p><%= place.description %></p><br />
   </div>
 
-
 <% end %>
+<div class="flickr_pagination col-12">
+  <%= will_paginate @places %>
+</div>
