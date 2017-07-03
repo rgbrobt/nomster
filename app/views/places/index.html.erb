@@ -10,4 +10,7 @@
 <% end %>
 <div class="flickr_pagination offset-5">
   <%= will_paginate @places %>
+  <div class="page_info">
+      <%= page_entries_info @places %>
+    </div>
 </div>
