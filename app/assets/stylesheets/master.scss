@@ -6,10 +6,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+.headline {
+  padding-top: 12px;
+}
+
 body {
   background: image_url('whitediamond.png');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-
+  //font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  //font-family: 'Fresca', sans-serif;
+  font-family: 'montserratlight';
+  font-width: 60%;
+  font-weight: bold;
 }
 
 .booyah-box {
