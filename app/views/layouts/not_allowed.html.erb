@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NOPE.</title>
+    <%= csrf_meta_tags %>
+   
+  </head>
+
+  <body>
+    <%= yield %>
+    <script type="text/javascript">
+    setTimeout(function(){location.href="/places"},5000);
+    </script>
+  </body>
+</html>

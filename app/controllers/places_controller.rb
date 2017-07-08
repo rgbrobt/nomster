@@ -26,7 +26,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
 
     if @place.user != current_user
-      return render text: 'Not Allowed', status: :forbidden
+      return render text: 'Not Allowed', layout: "not_allowed", status: :forbidden
     end
   end
 
