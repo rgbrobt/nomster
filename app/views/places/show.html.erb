@@ -2,9 +2,32 @@
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br />
-  <br />
+  <br/>
   <p><%= @place.description %></p>
-  <br />
+  <% if @place.latitude.present? && @place.longitude.present? %> 
+    <script>
+      function initMap() {
+        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+  
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: myLatLng
+        });
+  
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyNnfXm_0omV-3votz1sh4p_rGRc3EKpE&callback=initMap">
+    </script>
+
+    <div id="map"></div>
+  <% end %>
+<br/>
   <div class="show-btn float-right">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
