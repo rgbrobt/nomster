@@ -76,12 +76,15 @@
       <% if comment.humanized_rating.present? %>
         <b><%= comment.humanized_rating %></b> -
       <% end %>
-          <%= comment.message %>
-          <small><%= comment.user.email %></small>
+      <%= comment.message %>
+      <small><%= comment.user.email %></small>
     </blockquote>
   </div>
 <% end %>
 </div>
+
+<br/>
+<br/>
 
 <div class="show-btn float-right">
     <% if current_user && current_user == @place.user %>
